@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Casa en cuenta · Compras del hogar",
+  "short_name": "Casa en cuenta",
+  "description": "Control de compras del hogar en El Salvador",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#fff8df",
+  "theme_color": "#d9eef0",
+  "lang": "es-SV",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
