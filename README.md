@@ -1,17 +1,32 @@
 # Casa en cuenta
 
-App web móvil para apuntar las compras del hogar en Super Selectos, Dollar City y PriceSmart. Calcula subtotal por cantidad, total de la compra, guarda el historial y marca productos que aparecen por primera vez. Montos en USD.
+App web móvil para apuntar las compras del hogar en Super Selectos, Dollar City, PriceSmart y otros lugares que ustedes agreguen. Calcula subtotales, total de la compra, guarda el historial y marca productos que aparecen por primera vez. Montos en USD.
 
-La interfaz usa expresiones salvadoreñas como «quiúbole», «cabal» y «qué chivo», y una ilustración vectorial original inspirada en el mosaico folclórico, los colores y motivos naturales del arte palmeño de Fernando Llort.
+La interfaz usa expresiones salvadoreñas como «quiúbole», «cabal» y «qué chivo», con una ilustración vectorial original inspirada en el mosaico folclórico y los motivos naturales del arte palmeño de Fernando Llort.
 
-## Probar
+## Probar en modo local
 
-Abrí `index.html` en el navegador. Para instalarla en el teléfono y usarla sin conexión, primero publicala en un host HTTPS (por ejemplo GitHub Pages). En Android elegí **Instalar** o **Agregar a pantalla de inicio**; en iPhone, en Safari, tocá **Compartir → Añadir a pantalla de inicio**. El guardado local no se comparte automáticamente entre teléfonos.
+Abrí `index.html` en el navegador. Sin proyecto configurado, compras y tiendas se guardan solo en ese dispositivo.
 
-## Sincronización entre teléfonos
+## Instalar en el teléfono
 
-El esquema inicial está en `supabase-schema.sql`. Para habilitar una cuenta compartida hacen falta un proyecto de Supabase, autenticación para los dos usuarios, políticas RLS ligadas al hogar y configurar la URL/clave pública del proyecto. Aún no está conectado; no se debe usar una clave `service_role` en el navegador. El acceso a Supabase y el repositorio de GitHub se configuran al tener sus cuentas/proyecto destino.
+Publicá la app en HTTPS (GitHub Pages). En Android elegí **Instalar** o **Agregar a pantalla de inicio**; en iPhone, en Safari, tocá **Compartir → Añadir a pantalla de inicio**.
 
-## Alcance actual
+## Sincronizar dos cuentas
 
-Registro de compras e historial. No incluye inventario, alertas de existencias ni lectura de tickets/fotos todavía.
+1. Creá un proyecto Supabase dedicado a esta app.
+2. En **SQL Editor**, ejecutá todo `supabase-schema.sql`. Activa RLS; las compras y tiendas solo son visibles para miembros del mismo hogar.
+3. En **Authentication → Sign In / Providers**, habilitá correo y contraseña. Desactivá la confirmación de correo para que puedan crear cuenta sin configurar SMTP.
+4. En **Authentication → URL Configuration**, agregá `https://diplo19.github.io/casa-en-cuenta/` a las URLs permitidas.
+5. En **Project Settings → API Keys**, copiá la URL y la clave pública `publishable` (o `anon`) en `supabase-config.js`. Nunca pongás una clave `secret` ni `service_role` en el navegador.
+6. Publicá los cambios en GitHub Pages. Cada persona crea su cuenta con nombre, correo y clave; una crea el hogar y comparte el código con la otra.
+
+Para que **Olvidé mi contraseña** pueda enviar enlaces a cualquier correo, Supabase requiere configurar un servidor SMTP. El servidor gratuito de prueba solo entrega correos a miembros del equipo del proyecto. No agregués a tu prometida como miembro del equipo: el código del hogar le da el acceso limitado que necesita.
+
+## Tiendas
+
+La pestaña **Tiendas** permite agregar un lugar con nombre y emoji, o quitarlo de la lista activa. Las tiendas se archivan para conservar las etiquetas de compras anteriores. Con el hogar conectado, los cambios se comparten entre ambas cuentas.
+
+## Alcance
+
+Registro e historial de compras. No incluye inventario, alertas de existencias ni lectura de tickets/fotos.
