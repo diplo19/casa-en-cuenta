@@ -1,6 +1,5 @@
-// Supabase project settings are filled after the project has been created.
-// The publishable/anon key is safe for the browser only with RLS enabled.
+// Supabase project settings. The publishable key is intended for browser use with RLS enabled.
 window.CASA_SUPABASE_CONFIG = {
-  url: '',
-  anonKey: ''
+  url: 'https://ckbsqdoxzlggzwnwicft.supabase.co',
+  anonKey: 'sb_publishable_ixj0x4PopvvRVTFKq5jQXA_dOd4q367'
 };
