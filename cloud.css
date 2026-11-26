@@ -21,6 +21,7 @@ body[data-theme="minimalista"] .hero{border:1px solid #dedfdf;border-radius:12px
 body[data-theme="minimalista"] .hero:before,body[data-theme="minimalista"] .hero:after{display:none}
 body[data-theme="minimalista"] .hero h1,body[data-theme="minimalista"] .hero .eyebrow,body[data-theme="minimalista"] .section-heading h2,body[data-theme="minimalista"] .plan-card-heading h3,body[data-theme="minimalista"] .store-settings-heading h3{color:#303436;text-shadow:none}
 body[data-theme="minimalista"] .hero-illustration{opacity:.12;filter:grayscale(1)}
+body[data-theme="minimalista"] .tab-icon,body[data-theme="minimalista"] .plan-card-icon,body[data-theme="minimalista"] .store-icon,body[data-theme="minimalista"] .store-setting-icon,body[data-theme="minimalista"] .item-emoji{filter:grayscale(1);opacity:.72}
 body[data-theme="minimalista"] .store-card.selected,body[data-theme="minimalista"] .add-button,body[data-theme="minimalista"] .save-button:not(:disabled),body[data-theme="minimalista"] .plan-primary,body[data-theme="minimalista"] .tab.active{background:#dfe0df;color:#222;border-color:#797d7e;outline:none}
 body[data-theme="minimalista"] .entry-card,body[data-theme="minimalista"] .summary-card,body[data-theme="minimalista"] .history-card,body[data-theme="minimalista"] .plan-card,body[data-theme="minimalista"] .store-settings-card,body[data-theme="minimalista"] .empty-items,body[data-theme="minimalista"] .history-empty{border:1px solid #dedfdf;border-radius:12px;background:#fff;box-shadow:none}
 body[data-theme="minimalista"] .field input,body[data-theme="minimalista"] .field select,body[data-theme="minimalista"] .plan-field input,body[data-theme="minimalista"] .plan-field select,body[data-theme="minimalista"] .cloud-field input,body[data-theme="minimalista"] .appearance-controls select{border-color:#d3d4d4;border-radius:7px;background:#fff;color:#292c2e}
@@ -53,4 +54,3 @@ body[data-color-mode="oscuro"] .app-share-url{background:#191c1e;color:#e5e8e6;b
 body[data-color-mode="oscuro"] .toast{background:#34393b;color:#fff;border-color:#737a7b;box-shadow:none}
 body[data-color-mode="oscuro"] footer{border-color:#3b3f41;color:#a2a6a5}
 body[data-color-mode="oscuro"] .cloud-actions button,body[data-color-mode="oscuro"] .cloud-actions .secondary,body[data-color-mode="oscuro"] .cloud-signout,body[data-color-mode="oscuro"] .store-setting-toggle,body[data-color-mode="oscuro"] .share-copy{background:#34393b;color:#eceeed;border-color:#555b5d;box-shadow:none}
-
