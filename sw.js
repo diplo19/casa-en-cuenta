@@ -1,4 +1,7 @@
-const CACHE='casa-en-cuenta-v15';const FILES=['./','./index.html','./styles.css?v=mobile-polish-1','./mobile.css?v=dock-1','./cloud.css?v=accounts-stores-2','./supabase-config.js?v=2','./app.js?v=account-confirm-1','./manifest.json','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('casa-en-cuenta-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{if(e.request.method==='GET')e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./index.html'))))});
+const CACHE='casa-en-cuenta-v16';const FILES=['./','./index.html','./styles.css?v=mobile-polish-1','./mobile.css?v=bottom-nav-fab-1','./cloud.css?v=accounts-stores-2','./supabase-config.js?v=2','./app.js?v=bottom-nav-fab-1','./manifest.json','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('casa-en-cuenta-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{if(e.request.method==='GET')e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./index.html'))))});
+
+
+
 
 
 
