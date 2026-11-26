@@ -7,6 +7,7 @@
   const apply = () => {
     document.body.dataset.theme = prefs.theme;
     document.body.dataset.colorMode = prefs.mode;
+    document.documentElement.style.colorScheme = prefs.mode === 'oscuro' ? 'dark' : 'light';
     const theme = document.getElementById('app-theme');
     const mode = document.getElementById('color-mode');
     if (theme) theme.value = prefs.theme;
