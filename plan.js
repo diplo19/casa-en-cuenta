@@ -26,3 +26,9 @@ document.getElementById('shopping-list-form').onsubmit=addShoppingItem;
 document.getElementById('price-search').oninput=event=>renderPriceComparison(event.currentTarget.value);
 renderPlan();
 
+const PUBLIC_APP_URL='https://diplo19.github.io/casa-en-cuenta/';
+const appShareText=`¡Mirá esta app para llevar las compras de la casa! ${PUBLIC_APP_URL}`;
+document.getElementById('app-share-url').textContent=PUBLIC_APP_URL;
+document.getElementById('share-app-whatsapp').href=`https://wa.me/?text=${encodeURIComponent(appShareText)}`;
+document.getElementById('copy-app-url').onclick=async()=>{const status=document.getElementById('app-share-status');try{await navigator.clipboard.writeText(PUBLIC_APP_URL);status.textContent='¡Cabal! Link copiado. Ya lo podés mandar por donde querrás.'}catch{const input=document.createElement('textarea');input.value=PUBLIC_APP_URL;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';document.body.append(input);input.select();const copied=document.execCommand('copy');input.remove();status.textContent=copied?'¡Cabal! Link copiado. Ya lo podés mandar por donde querrás.':'Copiá este enlace: '+PUBLIC_APP_URL}};
+
