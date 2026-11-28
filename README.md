@@ -30,7 +30,7 @@ La pestaña **Tiendas** permite agregar un lugar con nombre y emoji, o quitarlo 
 
 ## Puntos de tarjetas
 
-En **Ajustes → Tarjetas y puntos** agregá el nombre de cada tarjeta y los dólares que el banco entrega por 1,000 puntos. En **Plan → ¿Cuánto valen tus puntos?** ingresá tu saldo para ver su equivalencia. Confirmá el valor de canje en la app o reglamento de tu banco; puede variar por tarjeta y forma de canje.
+En **Ajustes → Tarjetas y puntos** agregá el nombre de cada tarjeta y los dólares que el banco entrega por 1,000 puntos. En **Plan → ¿Cuánto valen tus puntos?** consultá o actualizá el saldo; la app guarda la fecha del último cambio y comparte ambos datos con el hogar. Confirmá el valor de canje en la app o reglamento de tu banco; puede variar por tarjeta y forma de canje.
 
 ## Alcance
 

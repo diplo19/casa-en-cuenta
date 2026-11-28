@@ -6,8 +6,14 @@ create table if not exists public.household_reward_programs (
   name text not null check (length(trim(name)) between 1 and 60),
   bank text not null default '',
   cash_per_thousand numeric(12,4) not null check (cash_per_thousand > 0),
+  balance_points bigint not null default 0 check (balance_points >= 0),
+  balance_updated_at timestamptz,
   primary key (household_id, id)
 );
+
+alter table public.household_reward_programs
+  add column if not exists balance_points bigint not null default 0 check (balance_points >= 0),
+  add column if not exists balance_updated_at timestamptz;
 
 alter table public.household_reward_programs enable row level security;
 
