@@ -50,13 +50,13 @@ async function loadRewardPrograms(preferCloud=false){
 }
 window.loadRewardPrograms=loadRewardPrograms;
 
-document.getElementById('reward-program-form').addEventListener('submit',async event=>{
+window.handleRewardProgramSubmit=async event=>{
   event.preventDefault();const form=event.currentTarget,existing=rewardPrograms.find(program=>program.id===editingRewardId);
   const program={id:existing?.id||`reward-${crypto.randomUUID?crypto.randomUUID():Date.now()}`,name:form.elements.name.value.trim(),bank:form.elements.bank.value.trim(),cashPerThousand:Number(form.elements.cashPerThousand.value)};
   if(!program.name||!(program.cashPerThousand>0))return;
   if(existing)rewardPrograms=rewardPrograms.map(item=>item.id===existing.id?program:item);else rewardPrograms.push(program);
   saveRewardProgramsLocal();renderRewardPrograms();resetRewardForm();await saveRewardProgram(program);toast(existing?'Tarjeta actualizada.':'Tarjeta agregada. ¡Cabal!');
-});
+};
 document.getElementById('points-program-select').onchange=renderPointsValue;
 document.getElementById('points-balance').oninput=renderPointsValue;
 renderRewardPrograms();
