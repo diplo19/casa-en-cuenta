@@ -93,7 +93,9 @@ document.getElementById('purchase-edit-form').onsubmit = async event => {
   storeLocal(); closePurchaseEditor(); renderHistory(); renderPlan(); toast('Compra corregida. ¡Ya quedó cabal!');
 };
 
-document.getElementById('cancel-purchase-edit').onclick = closePurchaseEditor;\ndocument.getElementById('cancel-purchase-edit-secondary').onclick = closePurchaseEditor;\ndocument.getElementById('edit-new-category').innerHTML = CATEGORIES.map(([name]) => <option></option>).join('');
+document.getElementById('cancel-purchase-edit').onclick = closePurchaseEditor;
+document.getElementById('cancel-purchase-edit-secondary').onclick = closePurchaseEditor;
+document.getElementById('edit-new-category').innerHTML = CATEGORIES.map(([name]) => `<option>${esc(name)}</option>`).join('');
 document.getElementById('purchase-edit-modal').onclick = event => { if (event.target.id === 'purchase-edit-modal') closePurchaseEditor(); };
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && !document.getElementById('purchase-edit-modal').hidden) closePurchaseEditor(); });
 
