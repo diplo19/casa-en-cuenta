@@ -19,7 +19,7 @@ function renderPointsValue(){
   if(!select||!balance||!value||!hint)return;
   const program=rewardPrograms.find(item=>item.id===select.value),points=Math.max(0,Number(balance.value)||0);
   value.textContent=money(program?points*Number(program.cashPerThousand)/1000:0);
-  hint.textContent=program?`${program.name}${program.bank?` · ${program.bank}`:''}: 'Configurá el valor de tus puntos en Ajustes.';
+  hint.textContent=program?`${program.name}${program.bank?` · ${program.bank}`:''}`:'Configurá el valor de tus puntos en Ajustes.';
 }
 function editRewardProgram(id){
   const program=rewardPrograms.find(item=>item.id===id),form=document.getElementById('reward-program-form');if(!program||!form)return;
