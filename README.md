@@ -16,10 +16,11 @@ Publicá la app en HTTPS (GitHub Pages). En Android elegí **Instalar** o **Agre
 
 1. Creá un proyecto Supabase dedicado a esta app.
 2. En **SQL Editor**, ejecutá todo `supabase-schema.sql`. Activa RLS; las compras y tiendas solo son visibles para miembros del mismo hogar.
-3. En **Authentication → Sign In / Providers**, habilitá correo y contraseña. Desactivá la confirmación de correo para que puedan crear cuenta sin configurar SMTP.
-4. En **Authentication → URL Configuration**, agregá `https://diplo19.github.io/casa-en-cuenta/` a las URLs permitidas.
-5. En **Project Settings → API Keys**, copiá la URL y la clave pública `publishable` (o `anon`) en `supabase-config.js`. Nunca pongás una clave `secret` ni `service_role` en el navegador.
-6. Publicá los cambios en GitHub Pages. Cada persona crea su cuenta con nombre, correo y clave; una crea el hogar y comparte el código con la otra.
+3. Ejecutá también `supabase-reward-programs-schema.sql` para compartir las tarjetas y sus equivalencias de puntos entre las dos cuentas.
+4. En **Authentication → Sign In / Providers**, habilitá correo y contraseña. Desactivá la confirmación de correo para que puedan crear cuenta sin configurar SMTP.
+5. En **Authentication → URL Configuration**, agregá `https://diplo19.github.io/casa-en-cuenta/` a las URLs permitidas.
+6. En **Project Settings → API Keys**, copiá la URL y la clave pública `publishable` (o `anon`) en `supabase-config.js`. Nunca pongás una clave `secret` ni `service_role` en el navegador.
+7. Publicá los cambios en GitHub Pages. Cada persona crea su cuenta con nombre, correo y clave; una crea el hogar y comparte el código con la otra.
 
 Para que **Olvidé mi contraseña** pueda enviar enlaces a cualquier correo, Supabase requiere configurar un servidor SMTP. El servidor gratuito de prueba solo entrega correos a miembros del equipo del proyecto. No agregués a tu prometida como miembro del equipo: el código del hogar le da el acceso limitado que necesita.
 
@@ -27,6 +28,11 @@ Para que **Olvidé mi contraseña** pueda enviar enlaces a cualquier correo, Sup
 
 La pestaña **Tiendas** permite agregar un lugar con nombre y emoji, o quitarlo de la lista activa. Las tiendas se archivan para conservar las etiquetas de compras anteriores. Con el hogar conectado, los cambios se comparten entre ambas cuentas.
 
+## Puntos de tarjetas
+
+En **Ajustes → Tarjetas y puntos** agregá el nombre de cada tarjeta y los dólares que el banco entrega por 1,000 puntos. En **Plan → ¿Cuánto valen tus puntos?** ingresá tu saldo para ver su equivalencia. Confirmá el valor de canje en la app o reglamento de tu banco; puede variar por tarjeta y forma de canje.
+
 ## Alcance
 
 Registro e historial de compras. No incluye inventario, alertas de existencias ni lectura de tickets/fotos.
+
